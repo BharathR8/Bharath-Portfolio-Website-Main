@@ -10,7 +10,7 @@ export default function About() {
                         <br className="hidden lg:inline-block" /> I love to build amazing apps. 
                     </h1>
                     <p className="mb-8 leading-relaxed">
-                        An Oracle certified developer with 8 years of experience in Software Development specializing in building highly scalable and responsive web applications from front-to-back. 
+                        An Oracle certified developer with 8+ years of experience in Software Development specializing in building highly scalable and responsive web applications from front-to-back. 
                     </p>
                     <div className="flex justify-center">
                         <a 
