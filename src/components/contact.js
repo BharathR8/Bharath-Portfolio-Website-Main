@@ -4,8 +4,6 @@ export default function Contact() {
     const [name, setName] = React.useState("");
     const [email, setEmail] = React.useState("bharathchandra.bcr@gmail.com");
     const [message, setMessage] = React.useState("");
-    const [subject, setSubject] = React.useState("Test");
-    const [attach, setAttach] = React.useState("path");
 
     function encode(data) {
         return Object.keys(data)
@@ -17,20 +15,20 @@ export default function Contact() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        // fetch("/", {
-        //     method:"POST",
-        //     headers:{"Content-Type": "application/x-www-form-urlencoded" },
-        //     body: encode({ "form-name": "contact", name, email, message}),
-        // })
-        // .then(() => alert("Message sent!"))
-        // .catch((error) => alert(error));
+        fetch("/", {
+            method:"POST",
+            headers:{"Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", name, email, message}),
+        })
+        .then(() => alert("Message sent!"))
+        .catch((error) => alert(error));
         let location = "mailto:"+email;
         window.open(
             location,
             '_blank' // <- This is what makes it open in a new window.
         );
-    }   
-
+    } 
+    
     return(
         <section id="contact" className="relative">
             <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
