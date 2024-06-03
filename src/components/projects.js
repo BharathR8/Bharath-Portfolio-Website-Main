@@ -18,7 +18,7 @@ export default function Projects() {
                 <div className="flex flex-wrap-m-4">
                     {projects.map((project, id) => (
                         <a
-                            href="https://joyful-palmier-7343e8.netlify.app"
+                            href="https://bharath-portfolio-site.netlify.app"
                             key={project.image}
                             className="sm:w-1/2 w-100 p-4">
                             <div className="flex relative">
